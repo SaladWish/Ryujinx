@@ -490,7 +490,7 @@ namespace Ryujinx.Audio.Renderer.Server
 
             ulong workBuffer = effect.GetWorkBuffer(-1);
 
-            _commandBuffer.GenerateReverb3dEffect(bufferOffset, effect.Parameter, effect.State, effect.IsEnabled, workBuffer, nodeId, newEffectChannelMappingSupported);
+            // _commandBuffer.GenerateReverb3dEffect(bufferOffset, effect.Parameter, effect.State, effect.IsEnabled, workBuffer, nodeId, newEffectChannelMappingSupported);
         }
 
         private void GenerateBiquadFilterEffect(uint bufferOffset, BiquadFilterEffect effect, int nodeId)
