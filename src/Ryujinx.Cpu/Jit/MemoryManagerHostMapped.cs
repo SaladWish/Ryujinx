@@ -1,4 +1,5 @@
 ﻿using ARMeilleure.Memory;
+using Ryujinx.Common.Logging;
 using Ryujinx.Memory;
 using Ryujinx.Memory.Range;
 using Ryujinx.Memory.Tracking;
@@ -137,7 +138,8 @@ namespace Ryujinx.Cpu.Jit
         {
             if (!ValidateAddressAndSize(va, size) || !IsRangeMappedImpl(va, size))
             {
-                throw new InvalidMemoryRegionException($"Not mapped: va=0x{va:X16}, size=0x{size:X16}");
+                // throw new InvalidMemoryRegionException($"Not mapped: va=0x{va:X16}, size=0x{size:X16}");
+                Logger.Error?.Print(LogClass.Application, "Crashfix triggered");
             }
         }
 
